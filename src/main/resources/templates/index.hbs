@@ -1,0 +1,43 @@
+{{#partial "content"}}
+    <h2>Add Student</h2>
+    <div class="section">
+            <div class="info">
+                <img class="icon" src="../images/logo.png">
+            </div>
+            <form class="form" action="" method="POST" name="student" onsubmit="return validate()" autocomplete="off" >
+                <ul class="list">
+                    <li>
+                        <label for="studentname"></label>
+                        <input type="text" name="name" class="input" placeholder="student name....">
+                    </li>
+                    <li><div class = "errormessage" id = "nameerror"></div></li>
+                    <li>
+                        <input type="submit" id="button" name="submit" value="Add">
+                    </li>
+                </ul>
+            </form>
+    </div>
+    <div>
+            <h2>Students</h2>
+            <div class="table">
+                <table class="table" >
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Student</th>
+                        <th>Added Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

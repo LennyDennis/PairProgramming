@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+.search{
+	width:230px;
+	position: relative;
+	display: flex;
+	float: right;
+	right: 50px;
+}
+.find{
+	width: 82%;
+	border: 3px solid #00B4CC;
+	border-right:none;
+	padding:5px;
+	height: 15px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	color:black;
+}
+.searchbutton{
+	width: 11%;
+	height: 31px;
+	border: 1px solid #00B4CC;
+	background: #00B4CC;
+	text-align: center;
+	color: #fff;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 20px;
+	margin-bottom:5px;
+}
+table{
+	border: 1px solid  rgba(0,136,169,1);
+	width: 95%;
+	opacity: 0.9;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 800;
+
+}
+td,th{
+	padding:6px;
+	text-align: center;
+	color: white;
+	border: none;
+}
+th{
+	background-color: rgba(20, 20, 20);
+}
+tr:nth-child(even){
+	background-color: rgba(20, 20, 20, .5);
+}
+tr:nth-child(odd){
+	background-color:  rgba(20, 20, 20, .7);
+}
