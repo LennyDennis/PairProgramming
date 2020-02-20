@@ -4,6 +4,7 @@ import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.sql2o.Sql2o;
 import org.sql2o.Connection;
@@ -22,7 +23,8 @@ public class App {
         Map<String, Object> model = new HashMap<String, Object>();
 
         get("/", (req, res) -> {
-            model.put("students", studentsDao.getAllStudents());
+            List<Students> allStudents = studentsDao.getAllStudents();
+            model.put("students", allStudents);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -33,7 +35,8 @@ public class App {
         post("/students/new",(req,res) ->{
             String name = req.queryParams("studentName");
             Students student = new Students(name);
-            return new ModelAndView(model,"index.hbs");
+            studentsDao.addStudent(student);
+            return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
     }
 
