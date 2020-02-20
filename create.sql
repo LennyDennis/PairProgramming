@@ -2,7 +2,8 @@ CREATE DATABASE paired;
 
 CREATE TABLE students(
 id SERIAL PRIMARY KEY,
-name VARCHAR
+name VARCHAR,
+studentDate TIMESTAMP
 );
 
 CREATE TABLE pairs(
