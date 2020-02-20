@@ -3,13 +3,13 @@ CREATE DATABASE paired;
 CREATE TABLE IF NOT EXISTS students(
 id SERIAL PRIMARY KEY,
 name VARCHAR,
-studentDate TIMESTAMP
+studentDate DATE
 );
 
 CREATE TABLE IF NOT EXISTS pairs(
 id SERIAL PRIMARY KEY,
 pairedIds VARCHAR,
-pairDate TIMESTAMP
+pairDate DATE
 );
 
 CREATE DATABASE paired_test WITH TEMPLATE paired;

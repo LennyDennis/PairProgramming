@@ -16,7 +16,7 @@ public class Sql2oStudentsDao implements StudentsDao{
 
     @Override
     public void addStudent(Students student){
-        String sql = "INSERT INTO students (name,studentDate) VALUES (:name,now())";
+        String sql = "INSERT INTO students (name,studentDate) VALUES (:name,CURRENT_DATE)";
         try(Connection con = sql2o.open()){
             int id = (int) con.createQuery(sql,true)
                     .bind(student)
@@ -33,6 +33,15 @@ public class Sql2oStudentsDao implements StudentsDao{
         try(Connection con = sql2o.open()){
             return con.createQuery(sql)
                     .executeAndFetch(Students.class);
+        }
+    }
+
+    @Override
+    public void clearAll(){
+        String sql ="DELETE FROM students *";
+        try(Connection con = sql2o.open()){
+            con.createQuery(sql)
+                    .executeUpdate();
         }
     }
 }
