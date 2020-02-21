@@ -18,6 +18,7 @@ public class Sql2oStudentsDaoTest {
     @Before
     public void setUp() throws Exception {
         String connectionString = "jdbc:postgresql://localhost:5432/paired_test";
+//        Sql2o sql2o = new Sql2o(connectionString, "sarah", "sarah");
         Sql2o sql2o = new Sql2o(connectionString, "lenny", " ");
         studentDao = new Sql2oStudentsDao(sql2o);
         conn = sql2o.open();
@@ -37,23 +38,19 @@ public class Sql2oStudentsDaoTest {
     public void addingStudentSetsAnId() throws Exception {
         Students testStudent = setUpStudent();
         int ogStudentId = testStudent.getId();
-        studentDao.addStudent(testStudent);
         assertNotEquals(ogStudentId, testStudent.getId());
     }
 
     @Test
-    public void getAllReturnsAllStudentsFromTheDb() throws Exception{
+    public void getAll_ReturnsAllStudentsFromTheDb() throws Exception{
         Students student1 = setUpStudent();
         Students student2 = setUpStudent();
-        studentDao.addStudent(student1);
-        studentDao.addStudent(student2);
         assertEquals(2, studentDao.getAllStudents().size());
     }
 
     @Test
     public void addStudents_testIfItSavedToDB(){
         Students student = setUpStudent();
-        studentDao.addStudent(student);
         assertTrue(studentDao.getAllStudents().get(0).equals(student));
     }
 
@@ -65,13 +62,12 @@ public class Sql2oStudentsDaoTest {
     @Test
     public void deleteCorrectStudentById() throws Exception {
         Students student = setUpStudent();
-        studentDao.addStudent(student);
         studentDao.deleteById(student.getId());
         assertEquals(0, studentDao.getAllStudents().size());
     }
 
     @Test
-    public void clearAllStudentsFromLIst() throws Exception {
+    public void clearAllStudentsFromList() throws Exception {
         Students student1 = setUpStudent();
         Students student2 = setUpStudent();
         studentDao.clearAll();
@@ -79,6 +75,8 @@ public class Sql2oStudentsDaoTest {
     }
 
     Students setUpStudent(){
-        return new Students("Brooklyn");
+        Students student = new Students("Brooklyn");
+        studentDao.addStudent(student);
+        return student;
     }
 }
