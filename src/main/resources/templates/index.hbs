@@ -2,9 +2,9 @@
     <h2>Add Student</h2>
     <div class="section">
             <div class="info">
-                <img class="icon" src="../images/logo.png">
+                <img class="icon" src="/images/download.jpeg">
             </div>
-            <form class="form" action="" method="POST" name="student" onsubmit="return validate()" autocomplete="off" >
+            <form class="form" action="/students/new" method="POST" name="student" onsubmit="return validate()" autocomplete="off" >
                 <ul class="list">
                     <li>
                         <label for="studentname"></label>
@@ -28,14 +28,20 @@
                         <th>Added Date</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    </tbody>
+                    {{#if students}}
+                        {{#each students}}
+                            <tbody>
+                            <tr>
+                                <td>{{id}}</td>
+                                <td>{{name}}</td>
+                                <td>{{studentDate}}</td>
+                            </tr>
+                            </tbody>
+
+                        {{/each}}
+                    {{/if}}
                 </table>
+                <button type="submit" id="button">Pair</button>
             </div>
     </div>
 {{/partial}}

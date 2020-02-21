@@ -1,13 +1,16 @@
 package models;
 
+import java.sql.Date;
 import java.util.Objects;
 
 public class Students {
     private int id;
-    private String studentName;
+    private String name;
+    private Date studentDate;
 
-    public Students(String studentName) {
-        this.studentName = studentName;
+    public Students(String name) {
+
+        this.name = name;
     }
 
     public int getId() {
@@ -18,12 +21,16 @@ public class Students {
         this.id = id;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public String getName() {
+        return name;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getStudentDate() {
+        return studentDate;
     }
 
     @Override
@@ -32,11 +39,11 @@ public class Students {
         if (o == null || getClass() != o.getClass()) return false;
         Students students = (Students) o;
         return id == students.id &&
-                studentName == students.studentName;
+                name.equals(students.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, studentName);
+        return Objects.hash(id, name);
     }
 }

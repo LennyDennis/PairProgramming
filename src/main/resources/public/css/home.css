@@ -35,14 +35,12 @@
   .info{
       width: 15%;
       background: rgba(20, 20, 20, .8);
-      padding: 10px 0;
       border-right: 2px solid rgba(10, 180, 180, 0.4);
   }
   .icon{
-      border-radius: 50%;
       opacity: 0.8;
-      height: 40px;
-      width: 40px;
+      height: 50px;
+      width: 100px;
       
   }
   .section h2 {
@@ -52,18 +50,17 @@
    }
    .form{
       width: 85%;
-      padding: 5px 0;
         background: rgba(10, 180, 180, 0.1);
   }
   .section li{
       float: left;
   }
   .input {
-      margin: 10px ;
+      margin: 10px;
       margin-left: 20px;
       font-size: 16px;
       padding: 5px;
-      width: 250px;
+      width: 300px;
       border: none;
       border-bottom: 1px solid rgba(10, 180, 180, 1);
       background: rgba(20, 20, 20, .4);
@@ -86,11 +83,22 @@
       text-decoration: none;
       font-size: 16px; 
       background-color: rgba(0,136,169,1);
-      border-radius: 50px;
+      border-radius: 10px;
       transition: all 0.5s ease;
   }
   #button:hover{
       background-color: rgba(0,136,169,0.4);
       transition: all 0.5s ease;
   
+  }
+  .pages h2{
+      font-size: 40px;
+      font-weight: 50;
+      font-family: 'Yantramanav', sans-serif;
+      line-height: 20px;
+  }
+  .pages p{
+      font-size: 24px;
+      font-family: 'Asap', sans-serif;
+      color: white;
   }

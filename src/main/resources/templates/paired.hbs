@@ -10,13 +10,15 @@
                     <th>Added Date</th>
                 </tr>
                 </thead>
+                {{#each students}}
                 <tbody>
                 <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
+                        <td>{{id}}</td>
+                        <td>{{studentName}}</td>
+                        <td>{{studentDate}}</td>
                 </tr>
                 </tbody>
+                    {{/each}}
             </table>
         </div>
     </div>

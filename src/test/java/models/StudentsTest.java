@@ -1,13 +1,9 @@
 package models;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
+import org.junit.*;
 import static org.junit.Assert.*;
 
 public class StudentsTest {
-
     @Before
     public void setUp() throws Exception {
     }
@@ -19,13 +15,13 @@ public class StudentsTest {
     @Test
     public void instantiatesStudentNameCorrectly() throws Exception {
         Students testStudent = setUpStudent();
-        assertEquals("Brooklyn", testStudent.getStudentName());
+        assertEquals("Brooklyn", testStudent.getName());
     }
     @Test
     public void setsNewStudentNameCorrectly() throws Exception {
         Students testStudent = setUpStudent();
-        testStudent.setStudentName("Hudson");
-        assertEquals("Hudson", testStudent.getStudentName());
+        testStudent.setName("Hudson");
+        assertEquals("Hudson", testStudent.getName());
     }
     @Test
     public void setId() {
