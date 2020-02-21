@@ -44,4 +44,14 @@ public class Sql2oStudentsDao implements StudentsDao{
                     .executeUpdate();
         }
     }
+
+    @Override
+    public void deleteById(int id){
+        String sql = "DELETE FROM students WHERE id=:id";
+        try(Connection con = sql2o.open()){
+            con.createQuery(sql)
+                    .addParameter("id",id)
+                    .executeUpdate();
+        }
+    }
 }

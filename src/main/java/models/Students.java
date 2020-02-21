@@ -39,11 +39,12 @@ public class Students {
         if (o == null || getClass() != o.getClass()) return false;
         Students students = (Students) o;
         return id == students.id &&
-                name.equals(students.name);
+                name.equals(students.name) &&
+                studentDate.equals(students.studentDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id, name, studentDate);
     }
 }

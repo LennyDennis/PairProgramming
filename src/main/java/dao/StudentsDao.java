@@ -11,4 +11,6 @@ public interface StudentsDao {
     List<Students> getAllStudents();
 
     void clearAll();
+
+    void deleteById(int id);
 }
