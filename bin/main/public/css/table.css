@@ -24,23 +24,3 @@ tr:nth-child(even){
 tr:nth-child(odd){
 	background-color:  rgba(20, 20, 20, .7);
 }
-
-.pairs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-    color: white;
-}
-
-.pair-names{
-    border: 2px solid white;
-    text-align: center;
-    margin-top: 2%;
-    font-size: 30px;
-}
-
-.pair-names:nth-child(even){
-    color: black;
-    background: white;
-}

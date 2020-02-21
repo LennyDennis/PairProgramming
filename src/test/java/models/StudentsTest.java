@@ -15,7 +15,7 @@ public class StudentsTest {
     @BeforeClass
     public static void setUp() throws Exception {
         String connectionString = "jdbc:postgresql://localhost:5432/paired";
-        Sql2o sql2o = new Sql2o(connectionString, "lenny", " ");
+        Sql2o sql2o = new Sql2o(connectionString, "moringa", "access");
 
         studentDao = new Sql2oStudentsDao(sql2o);
         conn = sql2o.open();

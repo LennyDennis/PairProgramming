@@ -18,26 +18,31 @@ public class Sql2oStudentsDaoTest {
     @BeforeClass
     public static void setUp() throws Exception {
         String connectionString = "jdbc:postgresql://localhost:5432/paired_test";
-        Sql2o sql2o = new Sql2o(connectionString, "lenny", " ");
+        Sql2o sql2o = new Sql2o(connectionString, "moringa", "access");
 
         studentDao = new Sql2oStudentsDao(sql2o);
         conn = sql2o.open();
     }
+
     @After
     public void tearDown() throws Exception {
         studentDao.clearAll();
     }
+
     @AfterClass
     public static void shutDown() throws Exception {
         conn.close();
     }
 
     Students testStudent = new Students("Dennis");
+
     @Test
-    public void addStudents_testIfItSavedToDB(){
+    public void addStudents_testIfItSavedToDB() {
         studentDao.addStudent(testStudent);
         assertTrue(studentDao.getAllStudents().get(0).equals(testStudent));
     }
 
 
 }
+
+

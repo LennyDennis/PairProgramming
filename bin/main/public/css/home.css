@@ -1,0 +1,104 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px;
+	margin:0px;
+
+  }
+  h2{
+  	font-size:30px;
+  	color: white;
+  	position: relative;
+
+  }
+  body {
+        background: url(../images/bg1.jpg) no-repeat center center fixed;
+        background-size: cover;
+  }
+  .section{
+      border: 1px solid rgba(10, 180, 180, 0.2);
+      position: relative;
+      width:95%;
+      height: 55px;
+      text-align: center;
+      display: inline-flex;
+      color: white;
+      box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+  }
+  #button,img{
+      text-decoration: none;
+      font-family: 'Comfortaa', cursive;
+      color: #edf0f1;
+      font-size: 16px;
+      cursor: pointer;
+      
+  }
+  .info{
+      width: 15%;
+      background: rgba(20, 20, 20, .8);
+      border-right: 2px solid rgba(10, 180, 180, 0.4);
+  }
+  .icon{
+      opacity: 0.8;
+      height: 50px;
+      width: 100px;
+      
+  }
+  .section h2 {
+    padding: 10px 0px 0px 0px;
+	font-size:25px;
+	color: white;
+   }
+   .form{
+      width: 85%;
+        background: rgba(10, 180, 180, 0.1);
+  }
+  .section li{
+      float: left;
+  }
+  .input {
+      margin: 10px;
+      margin-left: 20px;
+      font-size: 16px;
+      padding: 5px;
+      width: 300px;
+      border: none;
+      border-bottom: 1px solid rgba(10, 180, 180, 1);
+      background: rgba(20, 20, 20, .4);
+      color: white;
+      outline: none;
+      display: inline-block;
+      position: relative;
+    }
+  .errormessage{
+      color: rgb(165, 51, 51);
+  }
+  .list{
+      list-style-type: none;
+  }
+  #button{
+      border: none;
+      padding: 6px 20px;
+      margin-top: 10px;
+      margin-left:20px;
+      text-decoration: none;
+      font-size: 16px; 
+      background-color: rgba(0,136,169,1);
+      border-radius: 10px;
+      transition: all 0.5s ease;
+  }
+  #button:hover{
+      background-color: rgba(0,136,169,0.4);
+      transition: all 0.5s ease;
+  
+  }
+  .pages h2{
+      font-size: 40px;
+      font-weight: 50;
+      font-family: 'Yantramanav', sans-serif;
+      line-height: 20px;
+  }
+  .pages p{
+      font-size: 24px;
+      font-family: 'Asap', sans-serif;
+      color: white;
+  }
