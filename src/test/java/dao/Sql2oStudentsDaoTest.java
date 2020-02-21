@@ -18,7 +18,7 @@ public class Sql2oStudentsDaoTest {
     @Before
     public void setUp() throws Exception {
         String connectionString = "jdbc:postgresql://localhost:5432/paired_test";
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
+        Sql2o sql2o = new Sql2o(connectionString, "lenny", " ");
         studentDao = new Sql2oStudentsDao(sql2o);
         conn = sql2o.open();
     }
@@ -45,6 +45,8 @@ public class Sql2oStudentsDaoTest {
     public void getAllReturnsAllStudentsFromTheDb() throws Exception{
         Students student1 = setUpStudent();
         Students student2 = setUpStudent();
+        studentDao.addStudent(student1);
+        studentDao.addStudent(student2);
         assertEquals(2, studentDao.getAllStudents().size());
     }
 
@@ -64,7 +66,7 @@ public class Sql2oStudentsDaoTest {
     public void deleteCorrectStudentById() throws Exception {
         Students student = setUpStudent();
         studentDao.addStudent(student);
-//        studentsDao.deleteById(student.getId());
+        studentDao.deleteById(student.getId());
         assertEquals(0, studentDao.getAllStudents().size());
     }
 
@@ -72,7 +74,7 @@ public class Sql2oStudentsDaoTest {
     public void clearAllStudentsFromLIst() throws Exception {
         Students student1 = setUpStudent();
         Students student2 = setUpStudent();
-//        studentsDao.clearAll();
+        studentDao.clearAll();
         assertEquals(0, studentDao.getAllStudents().size());
     }
 

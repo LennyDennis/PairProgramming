@@ -39,7 +39,7 @@ public class Students {
         if (o == null || getClass() != o.getClass()) return false;
         Students students = (Students) o;
         return id == students.id &&
-                name.equals(students.name);
+                Objects.equals(name, students.name);
     }
 
     @Override
