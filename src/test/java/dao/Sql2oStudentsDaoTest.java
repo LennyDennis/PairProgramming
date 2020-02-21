@@ -54,7 +54,7 @@ public class Sql2oStudentsDaoTest {
     public void addStudents_testIfItSavedToDB(){
         Students student = setUpStudent();
         studentDao.addStudent(student);
-        assertTrue(studentDao.getAllStudents().get(1).equals(student));
+        assertTrue(studentDao.getAllStudents().get(0).equals(student));
     }
 
     @Test
