@@ -4,11 +4,11 @@
 
 # Contributors
 
-[Lenny Dennis](https://github.com/LennyDennis)
-[Andrew Ambia](https://github.com/Andrew-1000)
-[Sarah Mwendwa](https://github.com/blackrose9)
-[Timothy Maina](https://github.com/timothy12maisha)
-[Michael Odera](https://github.com/MichaelOdera)
+* [Lenny Dennis](https://github.com/LennyDennis)
+* [Andrew Ambia](https://github.com/Andrew-1000)
+* [Sarah Mwendwa](https://github.com/blackrose9)
+* [Timothy Maina](https://github.com/timothy12maisha)
+* [Michael Odera](https://github.com/MichaelOdera)
 
 # Built With
 Java 11
