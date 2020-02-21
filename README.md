@@ -11,11 +11,11 @@
 * [Michael Odera](https://github.com/MichaelOdera)
 
 # Built With
-Java 11
-Gradle
-Spark Framework
-Postgres
-HandlesBars
+* Java 11
+* Gradle
+* Spark Framework
+* Postgres
+* HandlesBars
 
 # Codebeat Badge
 [![codebeat badge](https://codebeat.co/badges/62cc2325-1e1c-4dcf-b0a9-add872a15834)](https://codebeat.co/projects/github-com-lennydennis-pairprogramming-development)
