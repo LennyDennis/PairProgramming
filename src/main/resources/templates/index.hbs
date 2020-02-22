@@ -1,48 +1,48 @@
 {{#partial "content"}}
     <h2>Add Student</h2>
     <div class="section">
-            <div class="info">
-                <img class="icon" src="/images/download.jpeg">
-            </div>
-            <form class="form" action="/students/new" method="POST" name="student" onsubmit="return validate()" autocomplete="off" >
-                <ul class="list">
-                    <li>
-                        <label for="studentname"></label>
-                        <input type="text" name="studentName" class="input" placeholder="student name....">
-                    </li>
-                    <li><div class = "errormessage" id = "nameerror"></div></li>
-                    <li>
-                        <input type="submit" id="button" name="submit" value="Add">
-                    </li>
-                </ul>
-            </form>
+        <div class="info">
+            <img class="icon" src="/images/download.jpeg">
+        </div>
+        <form class="form" action="/students/new" method="POST" name="student" onsubmit="return validate()" autocomplete="off" >
+            <ul class="list">
+                <li>
+                    <label for="studentname"></label>
+                    <input type="text" name="studentName" class="input" placeholder="student name....">
+                </li>
+                <li><div class = "errormessage" id = "nameerror"></div></li>
+                <li>
+                    <input type="submit" id="button" name="submit" value="Add">
+                </li>
+            </ul>
+        </form>
     </div>
     <div>
-            <h2>Students</h2>
-            <div class="table">
-                <table class="table" >
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Student</th>
-                        <th>Added Date</th>
-                    </tr>
-                    </thead>
-                    {{#if students}}
-                        {{#each students}}
-                            <tbody>
-                            <tr>
-                                <td>{{id}}</td>
-                                <td>{{name}}</td>
-                                <td>{{studentDate}}</td>
-                            </tr>
-                            </tbody>
+        <h2>Students</h2>
+        <div class="table">
+            <table class="table" >
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Student</th>
+                    <th>Added Date</th>
+                </tr>
+                </thead>
+                {{#if students}}
+                    {{#each students}}
+                        <tbody>
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{name}}</td>
+                            <td>{{studentDate}}</td>
+                        </tr>
+                        </tbody>
 
-                        {{/each}}
-                    {{/if}}
-                </table>
-                <button type="submit" id="button">Pair</button>
-            </div>
+                    {{/each}}
+                {{/if}}
+            </table>
+            <a href="/pairs/list"><button id="button">Pair</button></a>
+        </div>
     </div>
 {{/partial}}
 

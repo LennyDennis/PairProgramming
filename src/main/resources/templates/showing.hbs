@@ -1,0 +1,20 @@
+{{#partial "content"}}
+    <div class="container-fluid">
+        <h2 class="text-center">Paired List</h2>
+
+        {{#if myPairs}}
+            <div class="pairs row">
+                {{#each myPairs}}
+
+                    <div class="pair-names col-md-6">
+                        {{name}}
+                    </div>
+
+                {{/each}}
+            </div>
+        {{/if}}
+
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}
