@@ -1,10 +1,6 @@
 package models;
 
-import dao.Sql2oStudentsDao;
 import org.junit.*;
-import org.sql2o.Connection;
-import org.sql2o.Sql2o;
-
 import static org.junit.Assert.*;
 
 public class StudentsTest {
@@ -19,28 +15,33 @@ public class StudentsTest {
 
         studentDao = new Sql2oStudentsDao(sql2o);
         conn = sql2o.open();
+    @Before
+    public void setUp() throws Exception {
     }
+
     @After
     public void tearDown() throws Exception {
-        studentDao.clearAll();
-    }
-    @AfterClass
-    public static void shutDown() throws Exception {
-        conn.close();
-    }
-
-    Students testStudent = new Students("Pair");
-
-    @Test
-    public void getName_returnsStudentNameCorrectly(){
-
-        assertEquals("Pair", testStudent.getName());
     }
 
     @Test
-    public void setName_setsUpNameCorrectly(){
-        testStudent.setName("Pair");
-        assertEquals("Pair", testStudent.getName());
+    public void instantiatesStudentNameCorrectly() throws Exception {
+        Students testStudent = setUpStudent();
+        assertEquals("Brooklyn", testStudent.getName());
+    }
+    @Test
+    public void setsNewStudentNameCorrectly() throws Exception {
+        Students testStudent = setUpStudent();
+        testStudent.setName("Hudson");
+        assertEquals("Hudson", testStudent.getName());
+    }
+    @Test
+    public void setId() {
+        Students testStudent = setUpStudent();
+        testStudent.setId(5);
+        assertEquals(5, testStudent.getId());
     }
 
+    Students setUpStudent(){
+        return new Students("Brooklyn");
+    }
 }
